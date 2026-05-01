@@ -2,7 +2,6 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HabitacionRequest, HabitacionResponse } from '../../models/Habitacion.model';
 import { AuthService } from '../../services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ESTADOS_RESERVA } from '../../models/EstadoReserva.model';
 import { HabitacionesService } from '../../services/habitaciones.service';
 import Swal from 'sweetalert2';
 import { Roles } from '../../constants/Roles';
@@ -26,7 +25,6 @@ export class HabitacionesComponent {
   habitacionForm2: FormGroup;
   EstadosHabitacion = Object.values(EstadosHabitacion);
   isEditMode: boolean = false;
-  isEditEstadoMode: boolean = false;
   username: string | null = null;
   showMenuAdmin: boolean = false;
   selectedHabitacion: HabitacionResponse | null = null;
